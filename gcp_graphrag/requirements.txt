@@ -1,0 +1,36 @@
+# ── Core (always required) ────────────────────────────────────────────────
+numpy>=1.24
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.0
+watchdog>=4.0.0
+python-multipart>=0.0.9
+
+# ── Vector indexing ────────────────────────────────────────────────────────
+faiss-cpu>=1.7
+
+# ── Text embedding ────────────────────────────────────────────────────────
+sentence-transformers>=2.7    # fallback encoder — Windows-friendly
+transformers>=4.38            # for MuRIL primary encoder
+torch>=2.1                    # required by both
+
+# ── Text file reading ──────────────────────────────────────────────────────
+pypdf>=4.0
+python-docx>=1.1
+beautifulsoup4>=4.12
+
+# ── Image + Audio models (uncomment when needed) ──────────────────────────
+# transformers>=4.38            # for CLIP image encoder
+# open-clip-torch>=2.23         # alternative CLIP
+# openai-whisper>=20230314      # audio transcription
+# Pillow>=10.0                  # image reading
+
+# ── Generation (uncomment + set USE_REAL_GENERATOR=1 to enable mBART) ─────
+# transformers>=4.38
+# torch>=2.1
+# sentencepiece>=0.1.99
+# protobuf>=3.20
+
+# ── Evaluation ─────────────────────────────────────────────────────────────
+rouge-score>=0.1.2
+nltk>=3.8
